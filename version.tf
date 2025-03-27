@@ -10,7 +10,7 @@ terraform {
     }
   }
   backend "s3" {
-    bucket         = "my-terraform-state-bucket-unique-name-123"
+    bucket         = "my-terraform-state-bucket-unique-name-1234"
     key            = "eks/terraform.tfstate"
     region         = "ap-south-1"
     encrypt        = true
