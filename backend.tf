@@ -1,5 +1,5 @@
-resource "aws_s3_bucket" "terraform_state" {
-  bucket = "my-terraform-state-bucket"
+resource "aws_s3_bucket" "terraform_state1" {
+  bucket = "my-terraform-state-bucket1"
 }
 
 resource "aws_s3_bucket_versioning" "terraform_state" {
