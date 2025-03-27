@@ -14,7 +14,7 @@ terraform {
     key            = "eks/terraform.tfstate"
     region         = "ap-south-1"
     encrypt        = true
-    dynamodb_table = "terraform-lock"
+    dynamodb_table = "terraform-lock-unique-name-1234"
   }
 }
 }
