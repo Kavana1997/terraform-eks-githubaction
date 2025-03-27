@@ -66,7 +66,7 @@ resource "aws_eks_cluster" "this" {
 
 # Create security group for the cluster
 resource "aws_security_group" "eks_cluster" {
-  name        = "${var.cluster_name}-cluster-sg"
+  name        = "${var.cluster_name}-cluster-sg-12345"
   description = "Security group for EKS cluster"
   vpc_id      = module.vpc.vpc_id
 
@@ -80,7 +80,7 @@ resource "aws_security_group" "eks_cluster" {
 
 # Create IAM role for node group
 resource "aws_iam_role" "eks_node_role" {
-  name = "${var.cluster_name}-node-role-unique-name"
+  name = "${var.cluster_name}-node-role-unique-name-12345"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
