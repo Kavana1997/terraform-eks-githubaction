@@ -24,7 +24,7 @@ module "vpc" {
 
 # Create IAM role for EKS cluster
 resource "aws_iam_role" "eks_cluster_role" {
-  name = "${var.cluster_name}-cluster-role"
+  name = "${var.cluster_name}-cluster-role-unique-name"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
@@ -80,7 +80,7 @@ resource "aws_security_group" "eks_cluster" {
 
 # Create IAM role for node group
 resource "aws_iam_role" "eks_node_role" {
-  name = "${var.cluster_name}-node-role"
+  name = "${var.cluster_name}-node-role-unique-name"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
