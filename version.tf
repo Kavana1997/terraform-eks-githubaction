@@ -10,11 +10,11 @@ terraform {
     }
   }
   backend "s3" {
-    bucket         = "my-terraform-state-bucket-unique-name-1234"
+    bucket         = "my-terraform-state-bucket-unique-name-123"
     key            = "eks/terraform.tfstate"
     region         = "ap-south-1"
     encrypt        = true
-    dynamodb_table = "terraform-lock-unique-name-1234"
+    dynamodb_table = "terraform-lock-unique-name"
   }
 }
 }
