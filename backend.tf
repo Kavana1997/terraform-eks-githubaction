@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "terraform_state1" {
-  bucket = "my-terraform-state-bucket1"
+  bucket = "my-terraform-state-bucket-unique-name-123"
 }
 
 resource "aws_s3_bucket_versioning" "terraform_state" {
@@ -21,7 +21,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "terraform_state" 
 
 # Create DynamoDB table for state locking
 resource "aws_dynamodb_table" "terraform_locks" {
-  name         = "terraform-lock"
+  name         = "terraform-lock-unique-name"
   billing_mode = "PAY_PER_REQUEST"
   hash_key     = "LockID"
 
